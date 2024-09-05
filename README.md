@@ -1,5 +1,5 @@
 ﻿# Pellet-Based Individual Explanation Tool for OWL Ontologies
- Sure, here is the content for your `README.md` file:
+
 
 ```markdown
 # Individual Explanation IO
@@ -17,11 +17,13 @@ To run the `Individual_Explanation_IO` file, follow these steps:
 1. **Prepare your environment:**
    - Ensure you have Java installed.
    - Download and include the required libraries (OWL API, Pellet, etc.) in your project.
+   - Alternatively, if you are using an IDE, include the dependencies in your `pom.xml` file for Maven or the equivalent for other build       tools.
+   
 
 2. **Run the program:**
    - Compile and run the `Individual_Explanation_IO` Java file.
    - You will be prompted to enter the namespace, the local ontology file path, and the query string.
-
+   - Note: Make sure to use the appropriate file path notation for your operating system 
 ### Example Commands:
 
 To compile and run the program, you can use the following commands in your console:
@@ -73,6 +75,4 @@ java -cp ".;path/to/owlapi-distribution.jar;path/to/pellet.jar;path/to/other/dep
 
 This project is licensed under the MIT License.
 ```
-
-You can customize the content to fit your specific needs or preferences.
 

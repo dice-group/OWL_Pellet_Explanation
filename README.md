@@ -4,9 +4,9 @@ This project allows users to generate explanations for OWL individuals based on 
 
 ## Features
 - Uses **Pellet Reasoner** to perform reasoning over OWL ontologies.
-- Generates explanations for OWL individuals using **Manchester Syntax**.
+- Generates explanations for multiple OWL individuals using **Manchester Syntax**.
 - Saves explanations to text files for future reference.
-- Allows interactive selection of individuals when a name doesn't match.
+- Allows interactive selection list of individuals when given individual name doesn't match.
   
 ## Prerequisites
 Before you can run the project, ensure you have the following installed:

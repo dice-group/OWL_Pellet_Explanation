@@ -19,7 +19,7 @@ Before you can run the project, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com//ontology-explanation-generator.git
+   git clone https://github.com/Balramt/Pellet-Explanation.git
    cd ontology-explanation-generator
    ```
 

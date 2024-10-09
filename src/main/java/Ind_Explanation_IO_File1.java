@@ -5,7 +5,15 @@ import io.manchester.ManchesterSyntaxExplanationRenderer;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.NodeSet;
 
+<<<<<<<< HEAD:src/main/java/Ind_Explanation_IO_File1.java
 import java.io.*;
+========
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+>>>>>>>> 152631f1d5a112322675438f86e0a2e5ccf0a56f:src/main/java/Ind_Explanation_IO_File.java
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -13,7 +21,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+<<<<<<<< HEAD:src/main/java/Ind_Explanation_IO_File1.java
 public class Ind_Explanation_IO_File1 {
+========
+public class Ind_Explanation_IO_File {
+>>>>>>>> 152631f1d5a112322675438f86e0a2e5ccf0a56f:src/main/java/Ind_Explanation_IO_File.java
 
     // Define a default output directory
     private static final String DEFAULT_OUTPUT_DIR = "E:/Workspace_Dice/Pellet_Explanation_File_IO/src/main/java/explanation_output/";
@@ -214,7 +226,11 @@ public class Ind_Explanation_IO_File1 {
         String individualNames = lines[3].split("=")[1].trim();
 
         // Create an instance of the Ind_Explanation_IO_File class and run the explanation generation
+<<<<<<<< HEAD:src/main/java/Ind_Explanation_IO_File1.java
         Ind_Explanation_IO_File1 app = new Ind_Explanation_IO_File1();
+========
+        Ind_Explanation_IO_File app = new Ind_Explanation_IO_File();
+>>>>>>>> 152631f1d5a112322675438f86e0a2e5ccf0a56f:src/main/java/Ind_Explanation_IO_File.java
         app.run(ns, localOntologyPath, queryStr, individualNames);
         System.out.println("HI");
 

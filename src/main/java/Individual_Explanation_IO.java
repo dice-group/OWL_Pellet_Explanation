@@ -15,70 +15,8 @@ import java.util.Set;
 
 public class Individual_Explanation_IO {
 
-    public void run(String ns, String localOntologyPath, String queryStr) throws OWLOntologyCreationException, OWLException, IOException {
 
-        PelletExplanation.setup();
-
-        // The renderer is used to pretty print explanation
-        ManchesterSyntaxExplanationRenderer renderer = new ManchesterSyntaxExplanationRenderer();
-
-        // The writer used for the explanation rendered
-        PrintWriter out = new PrintWriter(System.out);
-        renderer.startRendering(out);
-
-        OWLOntologyManager owlmanager = OWL.manager;
-        File file = new File(localOntologyPath);
-        OWLOntology ontology = owlmanager.loadOntologyFromOntologyDocument(file);
-
-        // Create the reasoner and load the ontology
-        PelletReasoner reasoner = PelletReasonerFactory.getInstance().createReasoner(ontology);
-
-        // Create an explanation generator
-        PelletExplanation expGen = new PelletExplanation(reasoner);
-
-        // Parse the query string to build the OWLClassExpression
-        OWLClassExpression query = parseQueryString(ns, queryStr);
-
-        // Execute the query to get instances
-        NodeSet<OWLNamedIndividual> instances = reasoner.getInstances(query, false);
-        Set<OWLNamedIndividual> individuals = instances.getFlattened();
-
-        // Check if there are any results
-        if (!individuals.isEmpty()) {
-            // List all individuals
-            System.out.println("Individuals found:");
-            List<OWLNamedIndividual> individualList = new ArrayList<>(individuals);
-            for (int i = 0; i < individualList.size(); i++) {
-                System.out.println((i + 1) + ": " + individualList.get(i));
-            }
-
-            // Prompt the user to select an individual
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter the number corresponding to the individual you want an explanation for: ");
-            int selectedIndex = scanner.nextInt();
-
-            // Validate the selection
-            if (selectedIndex < 1 || selectedIndex > individualList.size()) {
-                System.out.println("Invalid selection.");
-            } else {
-                OWLNamedIndividual selectedIndividual = individualList.get(selectedIndex - 1);
-
-                // Explain the classification of the selected individual
-                Set<Set<OWLAxiom>> explanation = expGen.getInstanceExplanations(selectedIndividual, query, 10);
-
-                out.println("Explanation for individual: " + selectedIndividual);
-
-                // Render all explanations
-                renderer.renderAllExplanations(null, explanation);
-            }
-
-        } else {
-            System.out.println("No individuals found for the query.");
-        }
-
-        renderer.endRendering();
-    }
-
+    
     private OWLClassExpression parseQueryString(String ns, String queryStr) {
         // Remove outer parentheses if present
         queryStr = queryStr.trim();

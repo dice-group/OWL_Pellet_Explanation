@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Pellet_Explanation_IO" />
         <module name="Pellet_OWL_Reasoner" />
+        <module name="Pellet_Explanation_File_IO" />
       </profile>
     </annotationProcessing>
   </component>

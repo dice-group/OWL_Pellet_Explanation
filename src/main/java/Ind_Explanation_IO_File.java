@@ -216,7 +216,6 @@ public class Ind_Explanation_IO_File {
         // Create an instance of the Ind_Explanation_IO_File class and run the explanation generation
         Ind_Explanation_IO_File app = new Ind_Explanation_IO_File();
         app.run(ns, localOntologyPath, queryStr, individualNames);
-        System.out.println("HI I am good");
 
         // Record the end time
         long endTime = System.currentTimeMillis();

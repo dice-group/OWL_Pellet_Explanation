@@ -1,0 +1,22 @@
+Explanation for individual: <http://www.benchmark.org/family#F8M136>
+Explanation(s): 
+1)   Father subClassOf Parent
+     F8M138 type Male
+     F8M136 hasChild F8M138
+     F8M136 type Father
+
+
+2)   Father subClassOf Parent
+     F8M136 hasChild F8M138
+     F8M138 type Grandson
+     F8M136 type Father
+     Grandson subClassOf Male
+
+
+3)   Father subClassOf Parent
+     F8M138 type Son
+     Son subClassOf Male
+     F8M136 hasChild F8M138
+     F8M136 type Father
+
+

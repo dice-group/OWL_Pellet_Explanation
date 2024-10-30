@@ -1,0 +1,60 @@
+Explanation for individual: <http://www.benchmark.org/family#F8M132>
+Explanation(s): 
+1)   Father subClassOf Parent
+     F8M132 hasChild F8M134
+     F8M134 type Male
+     F8M132 type Father
+
+
+2)   F8M132 hasChild F8M134
+     F8M134 type Male
+     Grandfather subClassOf Grandparent
+     F8M132 type Grandfather
+     Grandparent subClassOf Parent
+
+
+3)   Son subClassOf Male
+     F8M134 type Son
+     F8M132 hasChild F8M134
+     Grandfather subClassOf Grandparent
+     F8M132 type Grandfather
+     Grandparent subClassOf Parent
+
+
+4)   F8M132 hasChild F8M134
+     Father subClassOf Male
+     F8M134 type Father
+     Grandfather subClassOf Grandparent
+     F8M132 type Grandfather
+     Grandparent subClassOf Parent
+
+
+5)   Grandfather subClassOf Male
+     F8M132 hasChild F8M134
+     Grandfather subClassOf Grandparent
+     F8M134 type Grandfather
+     F8M132 type Grandfather
+     Grandparent subClassOf Parent
+
+
+6)   Father subClassOf Parent
+     Grandfather subClassOf Male
+     F8M132 hasChild F8M134
+     F8M132 type Father
+     F8M134 type Grandfather
+
+
+7)   Father subClassOf Parent
+     F8M132 hasChild F8M134
+     F8M132 type Father
+     Father subClassOf Male
+     F8M134 type Father
+
+
+8)   Father subClassOf Parent
+     Son subClassOf Male
+     F8M134 type Son
+     F8M132 hasChild F8M134
+     F8M132 type Father
+
+

@@ -1,0 +1,75 @@
+Explanation for individual: <http://www.benchmark.org/family#F7F105>
+Explanation(s): 
+1)   Mother subClassOf Parent
+     F7M115 type Male
+     F7F105 hasChild F7M115
+     F7F105 type Mother
+
+
+2)   Grandmother subClassOf Grandparent
+     F7F105 type Grandmother
+     F7M115 type Male
+     F7F105 hasChild F7M115
+     Grandparent subClassOf Parent
+
+
+3)   Grandmother subClassOf Grandparent
+     Son subClassOf Male
+     F7F105 type Grandmother
+     F7M115 type Son
+     F7F105 hasChild F7M115
+     Grandparent subClassOf Parent
+
+
+4)   Grandmother subClassOf Grandparent
+     F7M115 type Grandson
+     F7F105 type Grandmother
+     F7F105 hasChild F7M115
+     Grandparent subClassOf Parent
+     Grandson subClassOf Male
+
+
+5)   Grandmother subClassOf Grandparent
+     F7F105 type Grandmother
+     F7M115 type Father
+     F7F105 hasChild F7M115
+     Father subClassOf Male
+     Grandparent subClassOf Parent
+
+
+6)   Grandmother subClassOf Grandparent
+     Brother subClassOf Male
+     F7F105 type Grandmother
+     F7F105 hasChild F7M115
+     F7M115 type Brother
+     Grandparent subClassOf Parent
+
+
+7)   F7M115 type Grandson
+     Mother subClassOf Parent
+     F7F105 hasChild F7M115
+     F7F105 type Mother
+     Grandson subClassOf Male
+
+
+8)   Mother subClassOf Parent
+     F7M115 type Father
+     F7F105 hasChild F7M115
+     Father subClassOf Male
+     F7F105 type Mother
+
+
+9)   Mother subClassOf Parent
+     Son subClassOf Male
+     F7M115 type Son
+     F7F105 hasChild F7M115
+     F7F105 type Mother
+
+
+10)   Brother subClassOf Male
+      Mother subClassOf Parent
+      F7F105 hasChild F7M115
+      F7M115 type Brother
+      F7F105 type Mother
+
+
